@@ -66,7 +66,7 @@ return [
 
     'dialog' => Config::dialog(),
 
-    'wuidropdown' => Config::dropdown(),
+    'dropdown' => Config::dropdown(),
 
     'icon' => Config::icon(),
 
@@ -122,5 +122,9 @@ return [
         //     'class' => Components\Button\Mini::class,
         //     'alias' => 'new-mini-button',
         // ],
+        'dropdown' => [
+            'alias' => 'wui-dropdown',
+        ],
+
     ]),
 ];
