@@ -22,7 +22,7 @@ new class extends Component {
                 'body' => $this->noteBody,
                 'recipient' => $this->noteRecipient,
                 'send_date' => $this->noteSendDate,
-                'is_published' => false
+                'is_published' => true
 
             ]
         );
@@ -38,7 +38,7 @@ new class extends Component {
    <x-input icon="user" wire:model='noteRecipient' label="Recipient" placeholder="yourfriend@email.com"></x-input>
    <x-input icon="calendar" wire:model='noteSendDate' type="date" label="Send Date"></x-input>
    <div class="pt-4">
-    <x-button wire:click='submit' right-icon="calendar" spinner>Schedule Note</x-button>
+    <x-button type="submit" right-icon="calendar" spinner>Schedule Note</x-button>
 
    </div>
 
