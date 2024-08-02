@@ -23,12 +23,15 @@ Volt::route('notes/{note}/edit', 'notes.edit-note')
     ->middleware(['auth'])
     ->name('notes.edit');
 
+
 Route::get('notes/{note}', function (Note $note) {
     if (!$note->is_published) {
-        abort(404, 'Not Published');
+        abort(404);
     }
+
     $user = $note->user;
-    return view('notes.show', compact('user', 'note'));
-})->name('notes.show');
+
+    return view('notes.view', ['note' => $note, 'user' => $user]);
+})->name('notes.view');
 
 require __DIR__ . '/auth.php';
